@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+         <head>
+             
+                <link rel="stylesheet" href="style.css">
+                <title>My Homepage</title>
+			   <link rel="icon" type="image/x-icon" href="Images/logo1.png">
+                <script src="Javascript Files/Sidebar.js" defer></script>
+		 </head>
+		 <style>
+		 body{
+		 background-color:black;
+		 }
+		      h1{
+			     font-family: Calibre ;
+			     color:black;
+				 text-align:justify;
+			    }
+				.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 1.5s;
+	padding-top: 60px;
+	}
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 80%;
+	color: #818181;
+	display: block;
+	transition: .3s;
+	}
+.sidenav a:hover {
+	color: saddlebrown;
+	}
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	}
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 16px;}
+	}
+			/*Menu Bar Button - Javascript*/	
+.open-menu-btn{
+	color: saddlebrown;
+	font-size: 2em;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	}
+				/*Shopping Cart Button - Javascript*/			
+.shopping-cart {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	transform: translateY(-50%);
+	font-size: 30px;
+	color:white;
+	cursor: pointer;
+	}	
+.shopping-cart a{
+	text-decoration:none;
+	}	
+				article {
+				flex: 1;
+				margin: 0 10px;
+				padding: 20px;
+				border: 3px solid black;
+				border-radius: 10px;
+				background-color: lightgreen;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+				font-size: 120%;
+				text-align: justify;}
+			section {
+				flex: 1;
+				margin: 0 10px;
+				padding: 20px;
+				border: 3px solid saddlebrown;
+				border-radius: 10px;
+				background-color: white;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;	
+				font-size: 120%;
+				text-align: justify;}  
+			aside {
+				flex: 1;
+				margin: 0 10px;
+				padding: 20px;
+				border: 3px solid black;
+				border-radius: 10px;
+				background-color: lightgreen;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+				font-size: 120%;
+				text-align: justify;}
+			  nav ul {
+				list-style: none;
+				padding: 10px;
+				margin: 10px;}
+			nav ul li {
+				display: inline;
+				margin-right: 50px;}
+			nav ul li a {
+				color: saddlebrown;
+				text-decoration: none;
+				font-weight: bold;}
+			div ul, li, a{
+			    display: outline;
+			    margin-right: 1px;
+			    font-size: 100%;
+				list-style: none; /*para mawala ang dot sa list*/
+				text-decoration: none;/*para mawala ang underline sa link*/
+				color:black;
+			   }
+
+			  header {
+				background-color: white;
+				color: black;
+				padding: 1px;
+				text-align: center;
+				font-size: 1em;}
+			
+		   	#background-image{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 100vh;
+				width:100%;
+				color:white;
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				filter: brightness(70%);}	
+			#background-image {
+			   position: relative;
+			}
+#background-image {
+	position: relative;
+	}
+#background-text h2 {
+	position: absolute;
+  	top: 50%;
+   	left: 50%;
+   	transform: translate(-50%, -50%);
+  	color: white;
+   	font-size: 3em;
+   	text-align: center;
+	}
+#background-text a {
+   	position: absolute;
+	top: 80%;
+	right: 425px;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	}
+#background-text a:hover {
+	color: #EFC3A4;
+	}
+			figure {
+				text-align: center;
+			}
+			figcaption {
+				margin-top: 10px;
+				font-size:2em;
+				font-weight: bold;
+			}
+#DarkChoco{
+				max-width: 400px;
+				height: 400px;
+				position: relative;
+				top: -10px;
+				right: -20px;}
+			#Okinawa{
+				max-width: 400px;
+				height: 400px;
+				position: relative;
+				top: -10px;
+				right: -10px;	
+			}#Oreo{
+				max-width: 400px;
+				height: 400px;
+				position: relative;
+				top: -10px;
+				left: -10px;}
+			  main {
+				display: flex;
+				justify-content: space-between;
+				padding: 20px;
+				flex-wrap: wrap;}
+			footer {
+				background-color: white;
+				color: saddlebrown;
+				text-align: center;
+				padding: 15px;
+				font-family: san-serif;
+				bottom: 0;} 
+				#Paragraph1{
+				background-color: lightgray;
+				color: black;
+				padding: 50px;
+				text-align: center;
+				font-size:2em;}
+		</style>	
+		
+		
+		 <body bgcolor="white">
+		<b>
+		 <header>
+		      <!-- Responsive Side Menu -->
+		<div class="open-menu-btn" onclick="openNav()">&#9776; </div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+			<a href="Home.html">HOME</a>
+			<a href="About.html">ABOUT</a>
+			<a href="STOREE.html">STORE</a>
+			<a href="Contact us.html">CONTACT</a>
+			<a href="Log in Form.html">LOG-OUT</a>
+		</div>
+              <nav>
+					<ul>
+					<li><a href="home.html" style="float: left; margin-left:180px;">HOME</a></li>   
+					<li><a href="STORE.html" style="float: left; margin-left:20px;">STORE</a></li>                      
+					<li><a href="About.html" style="float: left; margin-left:20px;">ABOUT</a></li>
+					<li><a div style="text-align: left; margin-left:10px;"></a></li>
+					
+					<img src="LAV1.JPG" style="width:100px; height:100px; position:relative; right:760px; top:5px;">
+					<li><a href="security.html" style="float: right; margin-right:70px;">SIGN-IN</a></li>
+					<li><a href="Contact1.html" style="float: right; margin-right:20px;">CONTACT</a></li>
+					</ul>
+				</nav>
+				<div class="shopping-cart"><a href="Cashier2.html">&#128722;</a></div>
+         </header>
+	       
+                 <img src="san4.jpg" id="background-image" width="2000"  height ="500"   >
+               <div id="background-text">	
+		   <h2>"Don't let this slip by just yet,<br>because I'm sure this is the only thing that will make you happy."</h2>
+		   <a href="online-store.html">Visit our online store</a>   
+		</div>	
+       
+            <br>
+		 <footer><center>
+                  <h3>&copy;  2024 Gastador. Visit us to find our Guitar Shop.
+	       	<br>
+	     	</br>
+   		          <h3>All Rights Reserved! </h3>
+		    <br>
+	    	</br>
+		          <h3>Website by: Jonas Gasttador</h3>
+        </footer></center>
+		 </body>
+</html>		

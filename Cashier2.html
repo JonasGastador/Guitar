@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Shop</title>
+    <link rel="icon" href="logo1.PNG">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .product {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-content {
+            padding: 10px;
+        }
+
+        .product-content h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .product-content p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #cart-items li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+        }
+
+        #cart .total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #cart-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #cart-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #cart-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .product {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guitar Shop</h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Acoustic Guitar</h3>
+                <p>PHP 1,900</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+		<div class="container">
+        <h1></h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Electic Guitar</h3>
+                <p>PHP 1,900</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+		<div class="container">
+        <h1></h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Small Guitar</h3>
+                <p>PHP 900</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+		<div class="container">
+        <h1></h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Black Guitar</h3>
+                <p>PHP 800</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+		<div class="container">
+        <h1></h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Acoustic Guitar</h3>
+                <p>PHP 1,900</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+		<div class="container">
+        <h1></h1>
+        <div class="product">
+            <div class="product-content">
+                <h3>Acoustic Guitar</h3>
+                <p>PHP 1,900</p>
+                <a href="#" class="btn" onclick="addToCart('Acoustic Guitar', 1900)">Add to Cart</a>
+            </div>
+        </div>
+        <!-- Repeat for other products -->
+    </div>
+
+    <div id="cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items"></ul>
+        <div class="total">Total: PHP <span id="cart-total">0</span></div>
+        <div id="cart-buttons">
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <script>
+       var cartTotal = 0;
+
+        function addToCart(itemName, itemPrice) {
+            var cartItems = document.getElementById("cart-items");
+            var item = document.createElement("li");
+            item.textContent = itemName + " - PHP " + itemPrice;
+            cartItems.appendChild(item);
+            cartTotal += parseInt(itemPrice);
+            document.getElementById("cart-total").textContent = cartTotal;
+        }
+
+        function checkout() {
+            alert("Thank you for your purchase!");
+            clearCart();
+        }
+
+        function clearCart() {
+            var cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+            cartTotal = 0;
+            document.getElementById("cart-total").textContent = cartTotal;
+        }
+    </script>
+</body>
+</html>
